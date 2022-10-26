@@ -60,9 +60,36 @@ public class MovementProvider : LocomotionProvider
 
     private void CheckForInput()
     {
+		//Debug.Log("Checking for input");
 		foreach (XRController controller in controllers) {
 			if (controller.enableInputActions)
 				CheckForMovement(controller.inputDevice);
+		}
+		if (XRSettings.loadedDeviceName == "MockHMD")
+        {
+			//Debug.Log("Mock HMD");
+			if (Input.GetKey(KeyCode.W))
+            {
+				GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+				StartMove(new Vector2(2f, 0.0f));
+				//StartMove(new Vector2(mainCamera.transform.forward.x, mainCamera.transform.forward.z));
+			}
+			if (Input.GetKey(KeyCode.S))
+            {
+				GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+				StartMove(new Vector2(-2f, 0.0f));
+				//StartMove(new Vector2(-mainCamera.transform.forward.x, -mainCamera.transform.forward.z));
+			}
+			if (Input.GetKey(KeyCode.D))
+			{
+				GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+				StartMove(new Vector2(0.0f, 2f));
+			}
+			if (Input.GetKey(KeyCode.A))
+			{
+				GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+				StartMove(new Vector2(0.0f, -2f));
+			}
 		}
     }
 
