@@ -1,0 +1,34 @@
+{
+  "expressions": [
+    {
+        "id": "1",
+        "weights": [
+            {
+              "blendShapeId": "123",
+              "blendShapeValue": "30"
+            },
+            {
+              "blendShapeId": "132",
+              "blendShapeValue": "25"
+            },
+            {
+              "blendShapeId": "133",
+              "blendShapeValue": "25"
+            },
+            {
+              "blendShapeId": "142",
+              "blendShapeValue": "100"
+            },
+            {
+              "blendShapeId": "165",
+              "blendShapeValue": "60"
+            },
+            {
+              "blendShapeId": "166",
+              "blendShapeValue": "60"
+            }
+        ]
+    }
+  ]
+}
+
