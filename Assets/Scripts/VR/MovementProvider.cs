@@ -27,6 +27,7 @@ public class MovementProvider : LocomotionProvider
 
     private void Start()
     {
+		Debug.Log("Device Name: " + XRSettings.loadedDeviceName);
 		speed=normalSpeed;
 		PositionController();
     }
